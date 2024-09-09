@@ -16,5 +16,9 @@ unscale <- function(x) {
   if (!is.null(original_mean) && !is.null(original_sd)) {
     x <- x * original_sd + original_mean
   }
+  else{
+    print("Error in computing mean or sd! Some values are null")
+    return(0)
+    }
   return(x)
 }
